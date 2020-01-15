@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Tigriz</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="icon" href="img/favicon.png" />
+</head>
+
+<body>
+    <div id="loading" class="section pointer" onclick="enter(this)">
+        <div class="grid">
+            <img class="running" src="img/running0.gif">
+            <div class="letter">S</div>
+        </div>
+        <div class="grid">
+            <img class="running" src="img/running1.gif">
+            <div class="letter">A</div>
+        </div>
+        <div class="grid">
+            <img class="running" src="img/running2.gif">
+            <div class="letter">Y</div>
+        </div>
+        <div class="grid">
+            <img class="running" src="img/running3.gif">
+            <div class="letter">A</div>
+        </div>
+        <div class="grid">
+            <img class="running" src="img/running4.gif">
+            <div class="letter">K</div>
+        </div>
+        <div class="grid">
+            <img class="running" src="img/running5.gif">
+            <div class="letter">A</div>
+        </div>
+    </div>
+    <div id="menu" class="section" style="display:none">
+        <audio id="decretum" src="audio/decretum.mp3"></audio>
+        <div id="music">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <table class="full-bar selected">
+                <tbody>
+                    <tr>
+                        <td>sayaka</td>
+                        <td>madoka</td>
+                        <td>homura</td>
+                        <td>kyouko</td>
+                        <td>kyubey</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="full-bar selected">
+                <tbody>
+                    <tr>
+                        <td>sayaka</td>
+                        <td>madoka</td>
+                        <td>homura</td>
+                        <td>kyouko</td>
+                        <td>kyubey</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="full-bar selected">
+                <tbody>
+                    <tr>
+                        <td>sayaka</td>
+                        <td>madoka</td>
+                        <td>homura</td>
+                        <td>kyouko</td>
+                        <td>kyubey</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="hide-bar"></div>
+        <div class="hide-bar full"></div>
+        <img id="sword" class="pointer" src="img/sword.png">
+        <img id="oktavia" class="pointer" src="img/oktavia.png">
+        <img id="sayaka" class="pointer" src="img/sayaka.png">
+        <div id="soulgem">
+            <div id="glow"></div>
+            tig<img class="pointer" onclick="soulgem()" src="img/soulgem.gif">riz
+        </div>
+        <div id="droplet">
+            <img style="transform: translateY(-1000px)" src="img/droplet.png">
+        </div>
+    </div>
+    <div id="sub-soulgem" class="section" style="display:none">
+        <div>
+            SALUT FRERO CA VA,,,,,,,,,,,,,,,,,,,,???????????????????
+        </div>
+    </div>
+    <script>
+        function enter(el) {
+            document.querySelector("audio").volume = 0.1;
+            document.querySelector("audio").play();
+            document.querySelector("#menu").style = "";
+            el.style = 'opacity:0';
+            setTimeout(() => el.style = 'display:none', 1000);
+        };
+        function soulgem() {
+            document.querySelector('#droplet img').style = "";
+            setTimeout(()=>document.querySelector('#sub-soulgem').style = "background:url('img/transition.gif') no-repeat center center fixed; background-size:cover;",500);
+            setTimeout(function () {
+                document.querySelector('#menu').style = "display:none";
+                document.querySelector('#sub-soulgem').style = ""
+            }, 1200);
+        };
+    </script>
+</body>
+
+</html>
