@@ -9,32 +9,32 @@
 
 @font-face {
     font-family: 'Madoka Letters';
-    src: url('http://monarchiie.iiens.net/tigriz/font/MadokaLetters.woff2') format('woff2'),
-         url('http://monarchiie.iiens.net/tigriz/font/MadokaLetters.woff') format('woff');
+    src: url('../font/MadokaLetters.woff2') format('woff2'),
+         url('../font/MadokaLetters.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Madoka Musical';
-    src: url('http://monarchiie.iiens.net/tigriz/font/MadokaMusical.woff') format('woff2'),
-         url('http://monarchiie.iiens.net/tigriz/font/MadokaMusical.woff') format('woff');
+    src: url('../font/MadokaMusical.woff') format('woff2'),
+         url('../font/MadokaMusical.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Madoka Runes';
-    src: url('http://monarchiie.iiens.net/tigriz/font/MadokaRunes.woff2') format('woff2'),
-         url('http://monarchiie.iiens.net/tigriz/font/MadokaRunes.woff') format('woff');
+    src: url('../font/MadokaRunes.woff2') format('woff2'),
+         url('../font/MadokaRunes.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Magicum Comicum';
-    src: url('http://monarchiie.iiens.net/tigriz/font/MagicumComicum.woff2') format('woff2'),
-         url('http://monarchiie.iiens.net/tigriz/font/MagicumComicum.woff') format('woff');
+    src: url('../font/MagicumComicum.woff2') format('woff2'),
+         url('../font/MagicumComicum.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -42,8 +42,8 @@
 
 @font-face {
     font-family: 'Magicum Texturae';
-    src: url('http://monarchiie.iiens.net/tigriz/font/MagicumTexturae.woff2') format('woff2'),
-         url('http://monarchiie.iiens.net/tigriz/font/MagicumTexturae.woff') format('woff');
+    src: url('../font/MagicumTexturae.woff2') format('woff2'),
+         url('../font/MagicumTexturae.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }

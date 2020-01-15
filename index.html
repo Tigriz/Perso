@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="icon" href="img/favicon.png" />
+
+    <link rel="preload" href="font/MadokaRunes.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="font/MadokaRunes.woff" as="font" type="font/woff" crossorigin="anonymous" />
+    <link rel="preload" href="img/transition.gif" as="image" />
 </head>
 
 <body>
@@ -37,7 +41,7 @@
         </div>
     </div>
     <div id="menu" class="section" style="display:none">
-        <audio id="decretum" src="audio/decretum.mp3"></audio>
+        <audio id="decretum" src="audio/decretum.ogg"></audio>
         <div id="music">
             <div class="line"></div>
             <div class="line"></div>
@@ -94,7 +98,7 @@
     </div>
     <div id="sub-soulgem" class="section" style="display:none">
         <div>
-            SALUT FRERO CA VA,,,,,,,,,,,,,,,,,,,,???????????????????
+            SALUT FRERO CA VA?
         </div>
     </div>
     <script>
@@ -107,7 +111,7 @@
         };
         function soulgem() {
             document.querySelector('#droplet img').style = "";
-            setTimeout(()=>document.querySelector('#sub-soulgem').style = "background:url('img/transition.gif') no-repeat center center fixed; background-size:cover;",500);
+            setTimeout(() => document.querySelector('#sub-soulgem').style = "background:url('img/transition.gif') no-repeat center center fixed; background-size:cover;", 500);
             setTimeout(function () {
                 document.querySelector('#menu').style = "display:none";
                 document.querySelector('#sub-soulgem').style = ""
