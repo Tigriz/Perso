@@ -1,0 +1,1 @@
+When hosting, resources/ folder is useless.
