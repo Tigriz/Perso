@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <div id="loading" class="section pointer fullscreen" onclick="enter(this)">
+    <div id="loading" class="section fullscreen">
         <div class="grid">
             <img class="running" src="img/running0.gif">
             <div class="letter">S</div>
@@ -106,32 +106,53 @@
         <div class="container" style="display:none">
             <div class="box" style="width: 18%">
                 <h1>Titre</h1><br>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, nisi cumque. Voluptatibus possimus aperiam expedita debitis aliquam. Magni similique sed culpa sit aspernatur aliquid nihil laboriosam. Iste, illo? Nisi, praesentium?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, nisi cumque. Voluptatibus possimus
+                aperiam expedita debitis aliquam. Magni similique sed culpa sit aspernatur aliquid nihil laboriosam.
+                Iste, illo? Nisi, praesentium?
             </div>
             <div class="box" style="width: 78%">
                 <h1>Titre</h1><br>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, nisi cumque. Voluptatibus possimus aperiam expedita debitis aliquam. Magni similique sed culpa sit aspernatur aliquid nihil laboriosam. Iste, illo? Nisi, praesentium?
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo ex quaerat nesciunt vitae fugiat, perspiciatis obcaecati tempora, perferendis ipsum earum ratione. Libero molestias aliquid facere consequatur voluptas ducimus tenetur ipsa?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, nisi cumque. Voluptatibus possimus
+                aperiam expedita debitis aliquam. Magni similique sed culpa sit aspernatur aliquid nihil laboriosam.
+                Iste, illo? Nisi, praesentium?
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo ex quaerat nesciunt vitae fugiat,
+                perspiciatis obcaecati tempora, perferendis ipsum earum ratione. Libero molestias aliquid facere
+                consequatur voluptas ducimus tenetur ipsa?
             </div>
             <div class="box" style="width: 78%">
                 <h1>Titre</h1><br>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, nisi cumque. Voluptatibus possimus aperiam expedita debitis aliquam. Magni similique sed culpa sit aspernatur aliquid nihil laboriosam. Iste, illo? Nisi, praesentium?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem expedita omnis quae dolore quaerat labore iste illum fugit, laborum ad sunt ipsam? Veritatis ut ipsam numquam et veniam commodi molestias.
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, nisi cumque. Voluptatibus possimus
+                aperiam expedita debitis aliquam. Magni similique sed culpa sit aspernatur aliquid nihil laboriosam.
+                Iste, illo? Nisi, praesentium?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem expedita omnis quae dolore quaerat labore
+                iste illum fugit, laborum ad sunt ipsam? Veritatis ut ipsam numquam et veniam commodi molestias.
             </div>
             <div class="box" style="width: 18%">
                 <h1>Titre</h1><br>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, nisi cumque. Voluptatibus possimus aperiam expedita debitis aliquam. Magni similique sed culpa sit aspernatur aliquid nihil laboriosam. Iste, illo? Nisi, praesentium?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, nisi cumque. Voluptatibus possimus
+                aperiam expedita debitis aliquam. Magni similique sed culpa sit aspernatur aliquid nihil laboriosam.
+                Iste, illo? Nisi, praesentium?
             </div>
         </div>
     </div>
     <script>
-        function enter(el) {
-            document.querySelector("audio").volume = 0.1;
-            document.querySelector("audio").play();
+        function onReady(callback) {
+            var intervalId = window.setInterval(function () {
+                if (document.getElementsByTagName('body')[0] !== undefined) {
+                    window.clearInterval(intervalId);
+                    callback.call(this);
+                }
+            }, 1000);
+        }
+
+        onReady(function () {
             document.querySelector("#menu").style = "";
-            el.style = 'opacity:0';
-            setTimeout(() => el.style = 'display:none', 1000);
-        };
+            document.querySelector("audio").volume = 0.5;
+            document.querySelector("audio").play();
+            document.querySelector("#loading").style = 'opacity:0';
+            setTimeout(function(){document.querySelector("#loading").style = 'display:none'}, 1000);
+        });
+
         function soulgem() {
             document.querySelector('#droplet img').style = "";
             setTimeout(() => document.querySelector('#sub-soulgem').style = "background:url('img/transition.gif') no-repeat center center fixed; background-size:cover;", 500);
